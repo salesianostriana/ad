@@ -38,6 +38,29 @@ public class RandomIntMatrix {
 
 		return m;
 	}
+	
+	
+	/*
+	 * Este método recibe el tamaño de la matriz a construir, y devuelve
+	 * una matriz bidimensional de datos aleatorios, con el tamaño
+	 * proporcionado.
+	 * 
+	 * @param filas			Número de filas de la matriz
+	 * @param columnas		Número de columnas de la matriz.
+	 * @return				Matriz <code>byte[][]</code> de datos aleatorios
+	 */
+	public static byte[][] randomByteMatrix(int filas, int columnas) {
+		byte[][] m = new byte[filas][columnas];
+
+		Random r = new Random();
+
+		for (int i = 0; i < filas; i++)
+			for (int j = 0; j < columnas; j++)
+				m[i][j] = (byte) (r.nextInt(256) - 128);
+
+		return m;
+	}
+	
 
 	/*
 	 * Este método recibe como argumento una matriz entera bidimensinonal

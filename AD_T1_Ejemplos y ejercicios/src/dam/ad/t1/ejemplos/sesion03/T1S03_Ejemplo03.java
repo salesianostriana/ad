@@ -20,9 +20,6 @@ import java.io.IOException;
  */
 public class T1S03_Ejemplo03 {
 
-	// -1 = EOF (End of file - Final de fichero)
-	private static final int EOF = -1;
-
 	public static void main(String[] args) {
 
 		// Creamos el flujo de entrada. Y siempre lo haremos así, en dos pasos:

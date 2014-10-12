@@ -32,7 +32,7 @@ public class T1S01_Ejemplo01 {
 			out = new FileOutputStream("primero.dat");
 			
 			//Escribimos algunos bytes.
-			for(int i = 0; i < 100; i++) {
+			for(int i = 0; i < 1000; i++) {
 				out.write(i);
 			}
 			

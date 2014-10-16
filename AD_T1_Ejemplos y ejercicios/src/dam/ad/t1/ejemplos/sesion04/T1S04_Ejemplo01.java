@@ -23,11 +23,17 @@ public class T1S04_Ejemplo01 {
 	private static final int EOF = -1;
 	
 	//Tamaño del buffer de lectura
-	private static final int TAM = 4*1024;
+	private static final int TAM = 512*1024;
 	
 	
 	public static void main(String[] args) {
 
+		
+		if (args.length != 1) {
+			System.err.println("Error de sintaxis. java T1S04_Ejemplo01 <ruta_de_fichero>");
+			return;
+		}
+		
 		// Creamos el flujo de entrada. Y siempre lo haremos así, en dos pasos:
 		// 1. Fuera del try...catch, definimos la referencia y la inicializamos
 		// a null
@@ -38,7 +44,7 @@ public class T1S04_Ejemplo01 {
 
 		try {
 			// Instanciamos el flujo de entrada desde el fichero
-			in = new BufferedInputStream(new FileInputStream("triana.jpg"));
+			in = new BufferedInputStream(new FileInputStream(args[0]));
 
 			//Leemos todo su contenido, pero usando buffering (arrays de bytes)
 			byte[] buffer = new byte[TAM];

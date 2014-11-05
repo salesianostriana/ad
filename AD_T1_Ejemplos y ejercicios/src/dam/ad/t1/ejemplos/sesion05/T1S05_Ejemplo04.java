@@ -45,7 +45,8 @@ public class T1S05_Ejemplo04 {
 			
 			while((linea = br.readLine()) != null) {
 				bw.write(linea);
-				bw.write('\n');
+				//bw.write('\n');
+				bw.newLine();
 			}
 			
 			
